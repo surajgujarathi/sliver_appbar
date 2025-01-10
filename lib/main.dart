@@ -117,7 +117,7 @@ class _MyHomePageState extends State<MyHomePage>
           return [
             SliverToBoxAdapter(
               child: Padding(
-                padding: EdgeInsets.all(16),
+                padding: const EdgeInsets.all(16),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -150,7 +150,7 @@ class _MyHomePageState extends State<MyHomePage>
                   ],
                   labelColor: Colors.black,
                   unselectedLabelColor: Colors.grey,
-                  indicator: BoxDecoration(),
+                  indicator: const BoxDecoration(),
                 ),
               ),
             ),
@@ -170,7 +170,7 @@ class _MyHomePageState extends State<MyHomePage>
   }
 
   Container commonContainerWidget(String name, String button, double height,
-      double heightBetweenText, bool namet) {
+      double heightBetweenText, bool names) {
     return Container(
       height: height,
       width: double.infinity,
@@ -187,7 +187,7 @@ class _MyHomePageState extends State<MyHomePage>
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            namet
+            names
                 ? Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
@@ -267,33 +267,5 @@ class _SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
   @override
   bool shouldRebuild(covariant SliverPersistentHeaderDelegate oldDelegate) {
     return false;
-  }
-}
-
-class RidesPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 238, 238, 238),
-      body: ListView.builder(
-        padding: const EdgeInsets.all(8.0),
-        itemCount: 3, // Number of ride items
-        itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.only(bottom: 16.0),
-            child: RideCard(
-              title: 'ride to ${['cochi', 'vayanad', 'kerala'][index]} hills',
-              organizerName: 'manish surapaneni',
-              bikeName: 'TVS',
-              distance: '900 km',
-              date: 'July 20 2024',
-              location: 'hyderabad',
-              coRiders: 12,
-              imagePath: 'assets/bike.avif', // Add your image asset
-            ),
-          );
-        },
-      ),
-    );
   }
 }

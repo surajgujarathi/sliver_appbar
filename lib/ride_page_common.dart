@@ -1,5 +1,33 @@
 import 'package:flutter/material.dart';
 
+class RidesPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 238, 238, 238),
+      body: ListView.builder(
+        padding: const EdgeInsets.all(8.0),
+        itemCount: 3, // Number of ride items
+        itemBuilder: (context, index) {
+          return Padding(
+            padding: const EdgeInsets.only(bottom: 16.0),
+            child: RideCard(
+              title: 'ride to ${['cochi', 'vayanad', 'kerala'][index]} hills',
+              organizerName: 'manish surapaneni',
+              bikeName: 'TVS',
+              distance: '900 km',
+              date: 'July 20 2024',
+              location: 'hyderabad',
+              coRiders: 12,
+              imagePath: 'assets/bike.avif', // Add your image asset
+            ),
+          );
+        },
+      ),
+    );
+  }
+}
+
 class RideCard extends StatelessWidget {
   final String title;
   final String organizerName;
