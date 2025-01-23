@@ -3,6 +3,7 @@
 A new Flutter project.
 
 ## Getting Started
+SCREEN SHOT-1
 
 This project is a starting point for a Flutter application.
 
