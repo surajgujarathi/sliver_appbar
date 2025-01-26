@@ -5,6 +5,7 @@ A new Flutter project.
 ## Getting Started
 SCREEN SHOT-1
 
+
 <img src='https://github.com/surajgujarathi/sliver_appbar/blob/main/assets/sc1.png' height=400/> 
 
 This project is a starting point for a Flutter application.
